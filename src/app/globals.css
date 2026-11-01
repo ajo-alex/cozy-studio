@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  --color-ivory: #F5F2EB;
+  --color-sand: #E8E0D4;
+  --color-charcoal: #242520;
+  --color-warm-gray: #77766E;
+  --color-olive: #737B5B;
+  --color-forest: #292D26;
+  --color-border-warm: #D9D4CA;
+
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-manrope), "Manrope", system-ui, -apple-system, sans-serif;
+}
+
 :root {
   --ivory: #F5F2EB;
   --sand: #E8E0D4;
@@ -10,25 +23,25 @@
   --border-warm: #D9D4CA;
 }
 
-/* Custom Semantic Colors & Fonts */
-.bg-ivory { background-color: #F5F2EB; }
-.bg-sand { background-color: #E8E0D4; }
-.bg-forest { background-color: #292D26; }
-.bg-olive { background-color: #737B5B; }
-.bg-charcoal { background-color: #242520; }
+/* Custom Semantic Colors & Fonts Fallbacks */
+.bg-ivory { background-color: #F5F2EB !important; }
+.bg-sand { background-color: #E8E0D4 !important; }
+.bg-forest { background-color: #292D26 !important; }
+.bg-olive { background-color: #737B5B !important; }
+.bg-charcoal { background-color: #242520 !important; }
 
-.text-charcoal { color: #242520; }
-.text-warm-gray { color: #77766E; }
-.text-olive { color: #737B5B; }
-.text-ivory { color: #F5F2EB; }
-.text-sand { color: #E8E0D4; }
+.text-charcoal { color: #242520 !important; }
+.text-warm-gray { color: #77766E !important; }
+.text-olive { color: #737B5B !important; }
+.text-ivory { color: #F5F2EB !important; }
+.text-sand { color: #E8E0D4 !important; }
 
-.border-warm { border-color: #D9D4CA; }
-.border-forest { border-color: rgba(245, 242, 235, 0.15); }
-.border-olive { border-color: #737B5B; }
+.border-warm { border-color: #D9D4CA !important; }
+.border-forest { border-color: rgba(245, 242, 235, 0.15) !important; }
+.border-olive { border-color: #737B5B !important; }
 
-.font-serif { font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif; }
-.font-sans { font-family: var(--font-manrope), "Manrope", system-ui, -apple-system, sans-serif; }
+.font-serif { font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif !important; }
+.font-sans { font-family: var(--font-manrope), "Manrope", system-ui, -apple-system, sans-serif !important; }
 
 html {
   background-color: #F5F2EB;

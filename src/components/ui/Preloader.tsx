@@ -21,7 +21,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
 
     // Subtle, fast progress counter
     const startTime = Date.now();
-    const duration = 1200; // 1.2s total intro
+    const duration = 750; // 0.75s total intro
 
     const timer = setInterval(() => {
       const elapsed = Date.now() - startTime;
@@ -33,11 +33,21 @@ export function Preloader({ onComplete }: PreloaderProps) {
         setTimeout(() => {
           setIsDone(true);
           onComplete();
-        }, 300);
+        }, 200);
       }
-    }, 25);
+    }, 20);
 
-    return () => clearInterval(timer);
+    // Fallback safety: guarantee preloader dismissal in 1s max
+    const safetyTimer = setTimeout(() => {
+      clearInterval(timer);
+      setIsDone(true);
+      onComplete();
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+      clearTimeout(safetyTimer);
+    };
   }, [onComplete]);
 
   if (isDone) return null;
