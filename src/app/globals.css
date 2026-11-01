@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #F5F2EB;
+  --sand: #E8E0D4;
+  --charcoal: #242520;
+  --warm-gray: #77766E;
+  --olive: #737B5B;
+  --forest: #292D26;
+  --border-warm: #D9D4CA;
+}
+
+/* Custom Semantic Colors & Fonts */
+.bg-ivory { background-color: #F5F2EB; }
+.bg-sand { background-color: #E8E0D4; }
+.bg-forest { background-color: #292D26; }
+.bg-olive { background-color: #737B5B; }
+.bg-charcoal { background-color: #242520; }
+
+.text-charcoal { color: #242520; }
+.text-warm-gray { color: #77766E; }
+.text-olive { color: #737B5B; }
+.text-ivory { color: #F5F2EB; }
+.text-sand { color: #E8E0D4; }
+
+.border-warm { border-color: #D9D4CA; }
+.border-forest { border-color: rgba(245, 242, 235, 0.15); }
+.border-olive { border-color: #737B5B; }
+
+.font-serif { font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif; }
+.font-sans { font-family: var(--font-manrope), "Manrope", system-ui, -apple-system, sans-serif; }
+
+html {
+  background-color: #F5F2EB;
+  color: #242520;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #F5F2EB;
+  color: #242520;
+  overflow-x: hidden;
+  font-family: var(--font-manrope), system-ui, sans-serif;
+}
+
+::selection {
+  background-color: #737B5B;
+  color: #F5F2EB;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F2EB;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D4CA;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #737B5B;
+}
+
+/* Fine hairline borders */
+.border-fine {
+  border-width: 1px;
+  border-color: #D9D4CA;
+}
+
+.border-fine-dark {
+  border-width: 1px;
+  border-color: rgba(245, 242, 235, 0.15);
+}
+
+/* Subtle grain overlay for tactile feeling */
+.grain-overlay {
+  background-image: radial-gradient(rgba(36, 37, 32, 0.05) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+/* Clip path helpers */
+.clip-full {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.clip-inset-hero {
+  clip-path: polygon(4% 4%, 96% 4%, 96% 96%, 4% 96%);
+}
